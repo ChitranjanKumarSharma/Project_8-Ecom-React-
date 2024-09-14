@@ -1,0 +1,127 @@
+.item {
+    width: 280px;
+    border: #edeaea solid 1px;
+    padding: 9px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgb(196, 193, 193);
+}
+
+.item:hover {
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+
+.item img {
+    width: 280px;
+}
+
+.item p {
+    margin: 6px 0px;
+}
+
+.item-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addToCart-button button {
+    padding: 16px 36px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: #f75b5b;
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+.addToCart-button button:hover{
+    background-color: #f62b2b;
+}
+
+.item-price-new {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item-price-old {
+    color: #8c8c8c;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+
+
+/*================================ MEDIA QUERY STARTS ==============================*/
+
+@media (max-width:1280px) {
+    .item {
+        width: 220px;
+        font-size: 14px;
+    }
+
+    .item img {
+        width: 220px;
+    }
+
+    .item-price-old {
+        font-size: 14px;
+    }
+
+    .addToCart-button button {
+        width: 130px;
+        font-size: 15px;
+        padding: 12px 0px;
+    }
+}
+
+@media (max-width:1024px) {
+    .item {
+        width: 170px;
+        font-size: 13px;
+    }
+
+    .item img {
+        width: 170px;
+    }
+
+    .item-price-old {
+        font-size: 13px;
+    }
+
+    .addToCart-button button {
+        width: 110px;
+        font-size: 12px;
+        padding: 10px 0px;
+    }
+}
+
+@media (max-width:800px) {
+    .item {
+        width: 120px;
+        font-size: 12px;
+    }
+
+    .item img {
+        width: 120px;
+    }
+
+    .item-price-old {
+        font-size: 12px;
+    }
+
+    .addToCart-button button {
+        width: 90px;
+        font-size: 10px;
+        padding: 7px 0px;
+    }
+
+    .item-description {
+        flex-direction: column;
+    }
+}
