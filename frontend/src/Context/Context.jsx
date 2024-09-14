@@ -7,7 +7,6 @@ const getDefaultCart = () => {
         cart[index] = 0;
     }
     return cart;
-    I
 }
 
 const ShopContextProvider = (props) => {
