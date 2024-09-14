@@ -15,10 +15,11 @@ const ShopContextProvider = (props) => {
     const [all_product, setAll_products] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/allproducts').then((resp) => resp.json()).then((data) => setAll_products(data));
+        //http://localhost:4000/allproducts
+        fetch('https://project-8-ecom-react-r0kh.onrender.com/allproducts').then((resp) => resp.json()).then((data) => setAll_products(data));
 
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/getcart', {
+            fetch('https://project-8-ecom-react-r0kh.onrender.com/getcart', {
                 method:'POST',
                 headers:{
                     Accept:'application',
@@ -39,7 +40,7 @@ const ShopContextProvider = (props) => {
     
         // Check if the user is logged in by checking the auth-token
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/addtocart', {
+            fetch('https://project-8-ecom-react-r0kh.onrender.com/addtocart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',  // Expect JSON response
@@ -60,7 +61,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/removefromcart', {
+            fetch('https://project-8-ecom-react-r0kh.onrender.com/removefromcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',  // Expect JSON response

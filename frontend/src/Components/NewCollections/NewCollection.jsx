@@ -5,7 +5,9 @@ import Item from '../Item/Item'
 function NewCollection() {
   const [new_collections, setNew_collections]= useState([]);
   useEffect(() => {
-    fetch('http://localhost:4000/newcollections')
+    // http://localhost:4000/newcollections
+
+    fetch('https://project-8-ecom-react-r0kh.onrender.com/newcollections')
       .then((response) =>  response.json() )
       .then((data) =>  setNew_collections(data) );
   }, [])
